@@ -43,7 +43,7 @@ def sigmoid(x):
     return (1 / (1 + math.exp(-x)))
 
 print('a,b,h1,h2,h3,o,t,delta_h1,delta_h2,delta_h3,delta_o,w_bias_h1,w_a_h1,w_b_h1,w_bias_h2,w_a_h2,w_b_h2,w_bias_h3,w_a_h3,w_b_h3,w_bias_o,w_h1_o,w_h2_o,w_h3_o')
-print('-,-,-,-,-,-,-,-,-,-,-,{},{},{},{},{},{},{},{},{},{},{},{},{}'.format(w_bias_h1,w_a_h1,w_b_h1,w_bias_h2,w_a_h2,w_b_h2,w_bias_h3,w_a_h3,w_b_h3,w_bias_o,w_h1_o,w_h2_o,w_h3_o))
+print(w_bias_h1,w_a_h1,w_b_h1,w_bias_h2,w_a_h2,w_b_h2,w_bias_h3,w_a_h3,w_b_h3,w_bias_o,w_h1_o,w_h2_o,w_h3_o,sep=",")
 
 for _ in range(iterations):
     for i in range(len(df)):
@@ -90,4 +90,4 @@ for _ in range(iterations):
         w_h2_o = (w_h2_o) + (eta*o_h2*delta_o)
         w_h3_o = (w_h3_o) + (eta*o_h3*delta_o)
 
-        print('{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}'.format(df['a'][i],df['b'][i],o_h1,o_h2,o_h3,o,t,delta_h1,delta_h2,delta_h3,delta_o,w_bias_h1,w_a_h1,w_b_h1,w_bias_h2,w_a_h2,w_b_h2,w_bias_h3,w_a_h3,w_b_h3,w_bias_o,w_h1_o,w_h2_o,w_h3_o))
+        print(df['a'][i],df['b'][i],o_h1,o_h2,o_h3,o,t,delta_h1,delta_h2,delta_h3,delta_o,w_bias_h1,w_a_h1,w_b_h1,w_bias_h2,w_a_h2,w_b_h2,w_bias_h3,w_a_h3,w_b_h3,w_bias_o,w_h1_o,w_h2_o,w_h3_o,sep=",")
